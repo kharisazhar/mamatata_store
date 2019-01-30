@@ -1,0 +1,1 @@
+<h2 class="text-center" style="padding:20px;">Cooming Soon</h2>
