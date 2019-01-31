@@ -125,23 +125,6 @@
 								</button>
 							</div>
 					</div>
-
-					<div class="col-md-4">
-						<h4>Shopping Cart</h4>
-						<table class="table table-striped">
-							<thead>
-								<tr>
-									<th>Items</th>
-									<th>Price</th>
-									<th>Qty</th>
-									<th>Total</th>
-									<th>Actions</th>
-								</tr>
-							</thead>
-							<tbody id="detail_cart">
-							</tbody>
-						</table>
-					</div>
 				</div>
 			</div>
 
