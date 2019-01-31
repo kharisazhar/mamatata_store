@@ -20,7 +20,6 @@ class Web extends CI_Controller {
 
 	public function product()
 	{
-		
 		$data["product"] = $this->m_product->getAll();
 		$this->load->view('v_nav');
 		$this->load->view('v_product', $data);
@@ -119,4 +118,7 @@ class Web extends CI_Controller {
 			show_404();
 		}
 	}
+
+	
+	
 }

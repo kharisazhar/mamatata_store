@@ -120,7 +120,7 @@
 
 
 <!--===============================================================================================-->
-<script src="<?php echo base_url();?>assets/vendor/jquery/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>assets/vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
 <script type="text/javascript" src="<?php echo base_url();?>assets/vendor/animsition/js/animsition.min.js"></script>
 <!--===============================================================================================-->
@@ -148,7 +148,7 @@
 <script type="text/javascript" src="<?php echo base_url();?>assets/vendor/lightbox2/js/lightbox.min.js"></script>
 <!--===============================================================================================-->
 <script type="text/javascript" src="<?php echo base_url();?>assets/vendor/sweetalert/sweetalert.min.js"></script>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 	$('.block2-btn-addcart').each(function () {
 		var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
 		$(this).on('click', function () {
@@ -162,24 +162,60 @@
 			swal(nameProduct, "is added to wishlist !", "success");
 		});
 	});
+</script> -->
 
-	//add to cart 
-	$('.add_cart').click(function(){
-            var produk_id    = $(this).data("produkid");
-            var produk_nama  = $(this).data("produknama");
-            var produk_harga = $(this).data("produkharga");
-            var quantity     = $('#' + produk_id).val();
-            $.ajax({
-                url : "<?php echo base_url();?>index.php/cart/add_to_cart",
-                method : "POST",
-                data : {produk_id: produk_id, produk_nama: produk_nama, produk_harga: produk_harga, quantity: quantity},
-                success: function(data){
-                    $('#detail_cart').html(data);
-                }
-            });
-        });
+<!--===============================================================================================-->
+<!-- <script type="text/javascript">
+	$('.add_cart').each(function () {
+		var nameProduct = $(this).parent().parent().parent().parent().find('.block2-name').html();
+		$(this).on('click', function () {
+			swal(nameProduct, "is added to cart !", "success");
+		});
+	});
+
+	$('.block2-btn-addwishlist').each(function () {
+		var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+		$(this).on('click', function () {
+			swal(nameProduct, "is added to wishlist !", "success");
+		});
+	});
+</script> -->
+<!--===============================================================================================-->
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(document).on('click','.add',function(){
+			var product_id    = $(this).data("id");
+			var product_name  = $(this).data("name");
+			var product_price = $(this).data("price");
+			var quantity   	  = $('#' + product_id).val();
+			$.ajax({
+				url : "<?php echo site_url('cart/add_to_cart');?>",
+				method : "POST",
+				data : {product_id: product_id, product_name: product_name, product_price: product_price, quantity: quantity},
+				success: function(data){
+					$('#detail_cart').html(data);
+				},
+				error: function(data) {
+             		alert('Exception:', exception);
+         		}
+			});
+		});
+
+		$('#detail_cart').load("<?php echo site_url('cart/load_cart');?>");
+		
+		$(document).on('click','.romove_cart',function(){
+			var row_id=$(this).attr("id"); 
+			$.ajax({
+				url : "<?php echo site_url('cart/hapus_cart');?>",
+				method : "POST",
+				data : {row_id : row_id},
+				success :function(data){
+					$('#detail_cart').html(data);
+				}
+			});
+		});
+	});
 </script>
-
 <!--===============================================================================================-->
 <script src="<?php echo base_url();?>assets/js/main.js"></script>
 

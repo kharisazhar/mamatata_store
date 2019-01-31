@@ -37,7 +37,7 @@
 		</div>
 
 		<div class="w-size14 p-t-30 respon5">
-			<h4 class="product-detail-name m-text16 p-b-13">
+			<h4 class="block2-name product-detail-name m-text16 p-b-13">
 				<!-- Boxy T-Shirt with Roll Sleeve Detail -->
 				<!-- Jas Hujan Anak -->
 				<?php foreach ($detail as $array => $row){
@@ -100,22 +100,43 @@
 								<i class="fs-12 fa fa-minus" aria-hidden="true"></i>
 							</button>
 
-							<input class="size8 m-text18 t-center num-product" type="number" name="num-product" value="1">
+							<input class="quantity size8 m-text18 t-center num-product" id="<?php foreach ($detail as $array => $row){
+									echo ($row['product_id']);
+								} ?>" type="number" name="quantity" value="1">
 
 							<button class="btn-num-product-up color1 flex-c-m size7 bg8 eff2">
 								<i class="fs-12 fa fa-plus" aria-hidden="true"></i>
 							</button>
 						</div>
 
-						<div class="btn-addcart-product-detail size9 trans-0-4 m-t-10 m-b-10">
-							<!-- Button -->
-							<a href="<?php base_url('index.php/cart/add_to_cart') ?>">
-								<button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
-									Add to Cart
-								</button>
-							</a>
-							
-						</div>
+						<button class="add btn btn-success btn-block" 
+								data-id="<?php foreach ($detail as $array => $row){
+									echo ($row['product_id']);
+								} ?>" 
+								data-name="<?php foreach ($detail as $array => $row){
+									echo ($row['product_name']);
+								} ?>" 
+								data-price="<?php foreach ($detail as $array => $row){
+									echo ($row['product_price']);
+								} ?>"
+								>Add To Cart</button>
+					</div>
+
+					<div class="col-md-4">
+						<h4>Shopping Cart</h4>
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>Items</th>
+									<th>Price</th>
+									<th>Qty</th>
+									<th>Total</th>
+									<th>Actions</th>
+								</tr>
+							</thead>
+							<tbody id="detail_cart">
+							</tbody>
+						</table>
 					</div>
 				</div>
 			</div>

@@ -116,26 +116,21 @@
 						<!-- Block2 -->
 						<div class="block2">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative ">
-
 								<img src="<?php echo base_url().'upload/product/'.$product->product_image ?>" alt="IMG-PRODUCT">
-
-
 								<div class="block2-overlay trans-0-4">
 									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
 										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
 										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
 									</a>
 
-									<?php foreach ($data as $row) : ?>
-
+									<input class="quantity size8 m-text18 t-center num-product" id="<?php echo $product->product_id;?>" type="hidden" name="quantity" value="1">									
 										<div class="block2-btn-addcart w-size1 trans-0-4">
 											<!-- Button -->
-											<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+											<button class="add flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" data-id="<?php echo $product->product_id;?>" data-name="<?php echo $product->product_name;?>" data-price="<?php echo $product->product_price;?>">
 												Add to Cart
 											</button>
 										</div>
-										
-									<?php endforeach;?>
+															
 								</div>
 							</div>
 
@@ -157,6 +152,22 @@
 					<?php endforeach;?>
 				</div>
 
+				<div class="col-md-4">
+						<h4>Shopping Cart</h4>
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>Items</th>
+									<th>Price</th>
+									<th>Qty</th>
+									<th>Actions</th>
+								</tr>
+							</thead>
+							<tbody id="detail_cart">
+							</tbody>
+						</table>
+					</div>
+
 				<!-- Pagination -->
 				<div class="pagination flex-m flex-w p-t-26">
 					<a href="#" class="item-pagination flex-c-m trans-0-4 active-pagination">1</a>
@@ -166,3 +177,4 @@
 		</div>
 	</div>
 </section>
+

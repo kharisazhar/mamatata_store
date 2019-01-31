@@ -11,10 +11,11 @@ class Cart extends CI_Controller {
     
     public function add_to_cart() {
         $data = array(
-            'id' => $this->input->post('product_id'),
-            'name' => $this->input->post('product_name'),
-            'image' => $this->input->post('product_image'),
-            'price' => $this->input->post('product_price')
+            'id'      => $this->input->post('product_id'),
+            'name'    => $this->input->post('product_name'),
+            'price'   => $this->input->post('product_price'),
+            'qty'     => $this->input->post('quantity')
+            // 'options' => array('Size' => 'L', 'Color' => 'Red')
         );
         $this->cart->insert($data);
         echo $this->show_cart();
@@ -29,14 +30,15 @@ class Cart extends CI_Controller {
                 <tr>
                     <td>'.$items['name'].'</td>
                     <td>'.$items['price'].'</td>
-                    <td><button type="button" id="'.$items['rowid'].'" class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4"></td>
+                    <td>'.$items['qty'].'</td>
+                    <td><button type="button" id="'.$items['rowid'].'" class="romove_cart btn btn-danger btn-sm">Cancel</button></td>
                 </tr>
             ';
         }
         $output .= '
             <tr>
                 <th colspan="3">Total</th>
-                <th colspan="2">$this->cart->total()</th>
+                <th colspan="2">'.'Rp '.$this->cart->total().'</th>
             </tr>
         ';
         return $output;
