@@ -109,17 +109,21 @@
 							</button>
 						</div>
 
-						<button class="add btn btn-success btn-block" 
-								data-id="<?php foreach ($detail as $array => $row){
-									echo ($row['product_id']);
-								} ?>" 
-								data-name="<?php foreach ($detail as $array => $row){
-									echo ($row['product_name']);
-								} ?>" 
-								data-price="<?php foreach ($detail as $array => $row){
-									echo ($row['product_price']);
-								} ?>"
-								>Add To Cart</button>
+						<div class="btn-addcart-product-detail size9 trans-0-4 m-t-10 m-b-10">
+								<!-- Button -->
+								<button class="add flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4"
+									data-id="<?php foreach ($detail as $array => $row){
+										echo ($row['product_id']);
+									} ?>" 
+									data-name="<?php foreach ($detail as $array => $row){
+										echo ($row['product_name']);
+									} ?>" 
+									data-price="<?php foreach ($detail as $array => $row){
+										echo ($row['product_price']);
+									} ?>">
+									Add to Cart
+								</button>
+							</div>
 					</div>
 
 					<div class="col-md-4">

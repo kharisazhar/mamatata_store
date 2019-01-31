@@ -26,21 +26,25 @@ class Cart extends CI_Controller {
         $no = 0;
         foreach ($this->cart->contents() as $items){
             $no++;
-            $output .='
-                <tr>
-                    <td>'.$items['name'].'</td>
-                    <td>'.$items['price'].'</td>
-                    <td>'.$items['qty'].'</td>
-                    <td><button type="button" id="'.$items['rowid'].'" class="romove_cart btn btn-danger btn-sm">Cancel</button></td>
-                </tr>
-            ';
+            $output .="
+                <li class='header-cart-item'>
+                    <div class='header-cart-item-txt>
+                        <a href='#' class='header-cart-item-name'>
+                            ".$items['name']."
+                        </a>
+                        <span class='header-cart-item-info'>
+                            ".$items['qty']." x ".$items['price']."
+                        </span>
+                    </div>                   
+                </li>  
+            ";
         }
-        $output .= '
-            <tr>
-                <th colspan="3">Total</th>
-                <th colspan="2">'.'Rp '.$this->cart->total().'</th>
-            </tr>
-        ';
+        $output .= "
+            <div class='header-cart-total'>
+                Total: Rp. ".$this->cart->total()."
+			</div>
+            
+        ";
         return $output;
     }
 
