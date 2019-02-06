@@ -112,16 +112,21 @@
 							<div class="header-cart-buttons">
 								<div class="header-cart-wrapbtn">
 									<!-- Button -->
-									<a href="cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+									<a href="<?php echo base_url() ?>web/cart" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
 										View Cart
 									</a>
 								</div>
 
 								<div class="header-cart-wrapbtn">
 									<!-- Button -->
-									<a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-										Check Out
+									<a id="checkout">
+										<button class="check_out flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+											Check Out
+										</button>
 									</a>
+									<!-- <a id="checkout" class="s-text13 active1">
+										<button class="check_out btn btn-success btn-block">check out</button>
+									</a> -->
 								</div>
 							</div>
 						</div>

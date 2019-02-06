@@ -1,6 +1,3 @@
-
-
-
 <!-- Content page -->
 <section class="bgwhite p-t-55 p-b-65">
 	<div class="container">
@@ -14,7 +11,7 @@
 
 					<ul class="p-b-54">
 						<li class="p-t-4">
-							<a href="#" class="s-text13 active1">
+							<a href="#" class="s-text13">
 								All
 							</a>
 						</li>

@@ -202,6 +202,7 @@
 		});
 
 		$('#detail_cart').load("<?php echo site_url('cart/load_cart');?>");
+		$('#page_cart').load("<?php echo site_url('cart/load_detail_cart');?>");
 		
 		$(document).on('click','.romove_cart',function(){
 			var row_id=$(this).attr("id"); 
@@ -211,6 +212,21 @@
 				data : {row_id : row_id},
 				success :function(data){
 					$('#detail_cart').html(data);
+				}
+			});
+		});
+	});
+</script>
+<!--===============================================================================================-->
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(document).on('click','.check_out',function(){
+			$.ajax({
+				url : "<?php echo site_url('cart/check_out');?>",
+				method : "GET",
+				data : 'hello',
+				success :function(data){
+					$('#checkout').html(data);
 				}
 			});
 		});
