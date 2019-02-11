@@ -38,8 +38,6 @@
 
 		<div class="w-size14 p-t-30 respon5">
 			<h4 class="block2-name product-detail-name m-text16 p-b-13">
-				<!-- Boxy T-Shirt with Roll Sleeve Detail -->
-				<!-- Jas Hujan Anak -->
 				<?php foreach ($detail as $array => $row){
 					// print_r($row);
 					echo ($row['product_name']);
@@ -109,7 +107,7 @@
 							</button>
 						</div>
 
-						<div class="btn-addcart-product-detail size9 trans-0-4 m-t-10 m-b-10">
+						<div class="add_cart btn-addcart-product-detail size9 trans-0-4 m-t-10 m-b-10">
 								<!-- Button -->
 								<button class="add flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4"
 									data-id="<?php foreach ($detail as $array => $row){

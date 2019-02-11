@@ -1,25 +1,26 @@
 <!--===============================================================================================-->
 <script type="text/javascript">
 	$(document).ready(function(){
-		$(document).on('click','.add',function(){
-			var product_id    = $(this).data("id");
-			var product_name  = $(this).data("name");
-			var product_price = $(this).data("price");
-			var quantity   	  = $('#' + product_id).val();
-			$.ajax({
-				url : "<?php echo site_url('cart/add_to_cart');?>",
-				method : "POST",
-				data : {product_id: product_id, product_name: product_name, product_price: product_price, quantity: quantity},
-				success: function(data){
-					$('#detail_cart').html(data);
-				},
-				error: function(data) {
-             		alert('Exception:', exception);
-         		}
-			});
-        });
-        
-        $('#detail_cart').load("<?php echo site_url('cart/load_cart');?>");
+		// $(document).on('click','.add_table_cart',function(){
+		// 	var product_id    = $(this).data("id");
+		// 	var product_name  = $(this).data("name");
+		// 	var product_price = $(this).data("price");
+			// var quantity   	  = $('#' + product_id).val();
+		// 	$.ajax({
+		// 		url : "<?php echo site_url('cart/add_to_cart');?>",
+		// 		method : "POST",
+		// 		data : {product_id: product_id, product_name: product_name, product_price: product_price, quantity: quantity},
+		// 		success: function(data){
+		// 			$('#table_cart').html(data);
+		// 		},
+		// 		error: function(data) {
+        //      		alert('Exception:', exception);
+        //  		}
+		// 	});
+		// });
+
+		// $('#detail_cart').load("<?php echo site_url('cart/load_cart');?>");
+		
 		
 		$(document).on('click','.romove_cart',function(){
 			var row_id=$(this).attr("id"); 
@@ -29,6 +30,19 @@
 				data : {row_id : row_id},
 				success :function(data){
 					$('#detail_cart').html(data);
+				}
+			});
+		});
+
+		$(document).on('click','.update_cart',function(){
+			var row_id=$(this).attr("id");
+			var quantity = "1";
+			$.ajax({
+				url : "<?php echo site_url('cart/update_cart'); ?>",
+				method : "POST",
+				data : {row_id : row_id ,quantity : quantity},
+				success : function(data){
+					$('#table_cart').html(data);
 				}
 			});
 		});

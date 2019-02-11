@@ -10,21 +10,21 @@ class M_product extends CI_Model{
     public $product_description;
     public $product_image = "default.jpg";
 
-    // public function rules(){
-    //     return [
-    //         ['field' => 'name',
-    //         'label' => 'Name',
-    //         'rules' => 'required'],
+    public function rules(){
+        return [
+            ['field' => 'name',
+            'label' => 'Name',
+            'rules' => 'required'],
 
-    //         ['field' => 'price',
-    //         'label' => 'Price',
-    //         'rules' => 'numeric'],
+            ['field' => 'price',
+            'label' => 'Price',
+            'rules' => 'numeric'],
 
-    //         ['field' => 'description',
-    //         'label' => 'Description',
-    //         'rules' => 'required']
-    //     ];
-    // }
+            ['field' => 'description',
+            'label' => 'Description',
+            'rules' => 'required']
+        ];
+    }
 
     public function getAll(){
         return $this->db->get($this->_table)->result();

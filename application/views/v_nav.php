@@ -119,7 +119,7 @@
 
 								<div class="header-cart-wrapbtn">
 									<!-- Button -->
-									<a id="checkout">
+									<a id="checkout" href="<?php echo base_url('cart/check_out') ?>">
 										<button class="check_out flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
 											Check Out
 										</button>

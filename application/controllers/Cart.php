@@ -23,12 +23,22 @@ class Cart extends CI_Controller {
 
     public function update_cart() {
         $data = array(
-            'id'      => $this->input->post('product_id'),
+            'rowid'      => $this->input->post('row_id'),
             'qty'    => $this->input->post('quantity'),
         );
         $this->cart->update($data);
         echo $this->show_detail_cart();
     }
+
+    public function hapus_cart() {
+        $data = array(
+            'rowid' => $this->input->post('row_id'),
+            'qty' => 0,
+        );
+        $this->cart->update($data);
+        echo $this->show_cart();
+    }
+    
 
     public function check_out(){
         $output = '';
@@ -44,15 +54,10 @@ class Cart extends CI_Controller {
         $output .= "
             Total: Rp. ".$this->cart->total()."
         ";
-        echo $output;
+        // echo $output;
         $base_url_wa = 'https://wa.me/6289665645475?text=';
-        echo "
-        <a href='".$base_url_wa."".$output."' id='checkout' class='s-text13 active1'>
-            <!-- All -->
-            <button class='check_out btn btn-success btn-block'>check out</button>
-        </a>
-        ";
-        
+        // echo $result;
+        redirect($base_url_wa.urlencode($output));
     }
 
     public function show_cart() {
@@ -91,7 +96,7 @@ class Cart extends CI_Controller {
             <tr class='table-row'>
                 <td class='column-1'>
                     <div class='cart-img-product b-rad-4 o-f-hidden'>
-                        <img src='<?php echo base_url()?>assets/<?php echo base_url()?>assets/images/item-10.jpg' alt='IMG-PRODUCT'>
+                        <img src='<?php echo base_url()?>assets/images/item-10.jpg' alt='IMG-PRODUCT'>
                     </div>
                 </td>
                 <td class='column-2'>".$items['name']."</td>
@@ -102,23 +107,18 @@ class Cart extends CI_Controller {
                             <i class='fs-12 fa fa-minus' aria-hidden='true'></i>
                         </button>
 
-                        <input class='quantity size8 m-text18 t-center num-product' type='number' name='quantity' value='".$items['qty']."' >
+                        <input class='quantity size8 m-text18 t-center num-product' id='".$items['id']."' type='number' name='quantity' value='".$items['qty']."' >
 
-                        <button class='btn-num-product-up color1 flex-c-m size7 bg8 eff2'>
+                        <button class='update_cart btn-num-product-up color1 flex-c-m size7 bg8 eff2 '>
                             <i class='fs-12 fa fa-plus' aria-hidden='true'></i>
                         </button>
+                        
                     </div>
                 </td>
-                <td class='column-5'> Rp. ".$this->cart->total()."</td>
+                <td class='column-5'> Rp. ".$items['subtotal']."</td>
             </tr>
             ";
         }
-        $output .= "
-            <div class='header-cart-total'>
-                Total: Rp. ".$this->cart->total()."
-			</div>
-            
-        ";
         return $output;
     }
 
@@ -130,14 +130,4 @@ class Cart extends CI_Controller {
     public function load_cart() {
         echo $this->show_cart();
     }
-
-    public function hapus_cart() {
-        $data = array(
-            'rowid' => $this->input->post('row_id'),
-            'qty' => 0,
-        );
-        $this->cart->update($data);
-        echo $this->show_cart();
-    }
-
 }

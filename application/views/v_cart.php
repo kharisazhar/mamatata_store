@@ -10,11 +10,40 @@
 							<th class="column-2">Product</th>
 							<th class="column-3">Price</th>
 							<th class="column-4 p-l-70">Quantity</th>
-							<th class="column-5">Total</th>
+							<th class="column-5">Subtotal</th>
 						</tr>
 						
-						<tbody id="page_cart">
+						<!-- <tbody id="table_cart"> -->
+						<tbody>
+							<?php foreach ($this->cart->contents() as $items): ?>
+								<tr class="table-row">
+									<td class="column-1">
+										<div class="cart-img-product b-rad-4 o-f-hidden">
+											<img src="<?php echo base_url()?>assets/images/item-10.jpg" alt="IMG-PRODUCT">
+										</div>
+									</td>
+									<td class="column-2"><?php echo $items['name']; ?></td>
+									<td class="column-3"><?php echo $items['price']; ?></td>
+									<td class="column-4">
+										<div class="flex-w bo5 of-hidden w-size17">
+											<button class="btn-num-product-down color1 flex-c-m size7 bg8 eff2">
+												<i class="fs-12 fa fa-minus" aria-hidden="true"></i>
+											</button>
+
+											<input class="size8 m-text18 t-center num-product" id="<?php echo $items['rowid'] ?>" type="number" name="" value="<?php echo $items['qty'] ?>" >
+
+											<button class="update_cart btn-num-product-up color1 flex-c-m size7 bg8 eff2 " id="<?php echo $items['rowid'] ?>">
+																						
+												<i class="fs-12 fa fa-plus" aria-hidden="true"></i>
+											</button>
+											
+										</div>
+									</td>
+									<td class="column-5"> Rp. <?php echo $items['subtotal']; ?> </td>
+								</tr>
+							<?php endforeach; ?>
 						</tbody>
+						
 					</table>
 				</div>
 			</div>
@@ -33,12 +62,19 @@
 					</div>
 				</div>
 
-				<div class="update_cart size10 trans-0-4 m-t-10 m-b-10">
+				<div class="size10 trans-0-4 m-t-10 m-b-10">
 					<!-- Button -->
-					<button class="add flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
+					<button class="update_cart flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4" 
+					data-id="<?php foreach ($this->cart->contents() as $items): echo $items['id']; endforeach; ?>" 
+					data-name="<?php foreach ($this->cart->contents() as $items): echo $items['name']; endforeach; ?>" 
+					data-price="<?php foreach ($this->cart->contents() as $items): echo $items['price']; endforeach; ?>" >
 						Update Cart
 					</button>
 				</div>
+
+				<!-- <?php foreach ($this->cart->contents() as $items): ?>
+					<?php echo $items["name"]; ?>
+				<?php endforeach; ?> -->
 			</div>
 
 			<!-- Total -->
