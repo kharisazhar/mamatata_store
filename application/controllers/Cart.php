@@ -52,7 +52,7 @@ class Cart extends CI_Controller {
             ";
         }
         $output .= "
-            Total: Rp. ".$this->cart->total()."
+            Total: Rp. ".number_format($this->cart->total())."
         ";
         // echo $output;
         $base_url_wa = 'https://wa.me/6289665645475?text=';
@@ -72,7 +72,7 @@ class Cart extends CI_Controller {
                             ".$items['name']."
                         </a>
                         <span class='header-cart-item-info'>
-                            ".$items['qty']." x ".$items['price']."
+                            ".$items['qty']." x ".number_format($items['price'])."
                         </span>
                     </div>                   
                 </li>  
@@ -80,7 +80,7 @@ class Cart extends CI_Controller {
         }
         $output .= "
             <div class='header-cart-total'>
-                Total: Rp. ".$this->cart->total()."
+                Total: Rp. ".number_format($this->cart->total())."
 			</div>
             
         ";

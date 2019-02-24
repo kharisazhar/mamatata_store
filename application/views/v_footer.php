@@ -148,6 +148,9 @@
 <script type="text/javascript" src="<?php echo base_url();?>assets/vendor/lightbox2/js/lightbox.min.js"></script>
 <!--===============================================================================================-->
 <script type="text/javascript" src="<?php echo base_url();?>assets/vendor/sweetalert/sweetalert.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
+<script src="js/map-custom.js"></script>
+<script src="js/main.js"></script>
 <script type="text/javascript">
 	$('.block2-btn-addcart').each(function () {
 		var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();

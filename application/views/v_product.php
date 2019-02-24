@@ -139,7 +139,7 @@
 								<span class="block2-price m-text6 p-r-5">
 									<!-- $75.00 -->
 									<?php 
-									echo "Rp " . number_format($product->product_price , 2, ",", ".");
+									echo "Rp " . number_format($product->product_price);
 									?>
 									
 								</span>

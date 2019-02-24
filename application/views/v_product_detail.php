@@ -47,7 +47,7 @@
 			<span class="m-text17">
 				<?php foreach ($detail as $array => $row){
 					// echo ($row['product_price']);
-					echo "Rp " . number_format($row['product_price'], 2, ",", ".");
+					echo "Rp " . number_format($row['product_price']);
 				} ?>
 			</span>
 
@@ -225,7 +225,7 @@
 
 								<span class="block2-price m-text6 p-r-5">
 									<?php
-										echo "Rp " . number_format($product->product_price, 2, ",", ".");	
+										echo "Rp " . number_format($product->product_price);	
 									?>
 								</span>
 							</div>
