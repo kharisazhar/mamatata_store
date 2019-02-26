@@ -195,7 +195,7 @@
 				method : "POST",
 				data : {product_id: product_id, product_name: product_name, product_price: product_price, quantity: quantity},
 				success: function(data){
-					$('#detail_cart').html(data);
+					$('#detail_cart').html(data);	
 				},
 				error: function(data) {
              		alert('Exception:', exception);
@@ -216,8 +216,20 @@
 			});
 		});
 
+		$(document).on('click','.add',function(){
+			$.ajax({
+				url : "<?php echo site_url('cart/get_total_qty');?>",
+				method : "POST",
+				data : "success",
+				success: function(data){
+					$('#update_notif').html(data);
+				}
+			});
+		});
+
 		$('#detail_cart').load("<?php echo site_url('cart/load_cart');?>");
 		$('#table_cart').load("<?php echo site_url('cart/load_detail_cart');?>");
+		$('#update_notif').load("<?php echo site_url('cart/get_total_qty');?>");
 		
 		$(document).on('click','.romove_cart',function(){
 			var row_id=$(this).attr("id"); 

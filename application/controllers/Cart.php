@@ -6,7 +6,7 @@ class Cart extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
-		$this->load->model('m_product');
+        $this->load->model('m_product');
     }
     
     public function add_to_cart() {
@@ -18,6 +18,8 @@ class Cart extends CI_Controller {
             // 'options' => array('Size' => 'L', 'Color' => 'Red')
         );
         $this->cart->insert($data);
+        $rows = count($this->cart->contents());
+        echo $rows;
         echo $this->show_cart();
     }
 
@@ -129,5 +131,10 @@ class Cart extends CI_Controller {
 
     public function load_cart() {
         echo $this->show_cart();
+    }
+
+    public function get_total_qty() {
+        $rows = count($this->cart->contents());
+        echo $rows;
     }
 }
