@@ -50,7 +50,7 @@ class M_product extends CI_Model{
         $this->product_name = $post["name"];
         $this->product_price = $post["price"];
         
-        if (!empty($_FILES["image"]["id"])) {
+        if (!empty($_FILES["image"]["name"])) {
             $this->product_image = $this->_uploadImage();
         } else {
             $this->product_image = $post["old_image"];
