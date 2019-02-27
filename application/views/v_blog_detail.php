@@ -11,7 +11,7 @@
 		</a>
 
 		<span class="s-text17">
-			Black Friday Guide: Best Sales & Discount Codes
+			Ada yang Menarik di Ajang "Jakarta Sneaker Day 2019"
 		</span>
 	</div>
 
@@ -23,12 +23,12 @@
 					<div class="p-r-50 p-r-0-lg">
 						<div class="p-b-40">
 							<div class="blog-detail-img wrap-pic-w">
-								<img src="<?php echo base_url()?>assets/images/blog-04.jpg" alt="IMG-BLOG">
+								<img src="<?php echo base_url('assets/images/white_sneakers.jpg') ?>" alt="IMG-BLOG">
 							</div>
 
 							<div class="blog-detail-txt p-t-33">
 								<h4 class="p-b-11 m-text24">
-									Black Friday Guide: Best Sales & Discount Codes
+									Ada yang Menarik di Ajang "Jakarta Sneaker Day 2019"
 								</h4>
 
 								<div class="s-text8 flex-w flex-m p-b-21">
@@ -38,26 +38,30 @@
 									</span>
 
 									<span>
-										28 Dec, 2018
+										18 Feb, 2019
 										<span class="m-l-3 m-r-6">|</span>
 									</span>
 
 									<span>
-										Cooking, Food
+										Fashion, Life style
 										<span class="m-l-3 m-r-6">|</span>
 									</span>
 
 									<span>
-										8 Comments
+										28 Comments
 									</span>
 								</div>
 
 								<p class="p-b-25">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed turpis sed lorem dignissim vulputate nec cursus ante. Nunc sit amet tempor magna. Donec eros sem, porta eget leo et, varius eleifend mauris. Donec eu leo congue, faucibus quam eu, viverra mauris. Nulla consectetur lorem mi, at scelerisque metus hendrerit vitae. Proin vel magna vel neque porta ultricies non eget mauris. Suspendisse potenti.
+								Tahun 2019 Jakarta Sneaker Day (JSD) memasuki penyelenggaraan ke-3. Ajang JSD boleh dibilang menjadi salah satu agenda wajib yang perlu disambangi para sneakerhead Indonesia. Tahun ini, ajang yang akan digelar 7-9 Februari 2019 di The Hall Senayan City tersebut mengusung tema "The Rise of Sneaker Culture". Realisasi dari tema tersebut, menurut event director JSD Andrey Noelfry, dalam wujud community enabler. Artinya, ada upaya mempersatukan berbagai macam komunitas dari ekosistem sneakers, serta berdampak pada kultur komunitas industri kreatif.
 								</p>
 
 								<p class="p-b-25">
-									Aliquam faucibus scelerisque placerat. Vestibulum vel libero eu nulla varius pretium eget eu magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean dictum faucibus felis, ac vestibulum risus mollis in. Phasellus neque dolor, euismod vitae auctor eget, dignissim a felis. Etiam malesuada elit a nibh aliquam, placerat ultricies nibh dictum. Nam ut egestas velit. Pellentesque viverra tincidunt tellus. Etiam cursus, ligula id vehicula cursus, turpis mauris facilisis massa, eget tincidunt est purus et odio. Nam quis luctus libero, non posuere velit. Ut eu varius diam, eu euismod elit. Donec efficitur, neque eu consectetur consectetur, dui sem consectetur felis, vitae rutrum risus urna vel arcu. Aliquam semper ullamcorper laoreet. Sed arcu lectus, fermentum imperdiet purus eu, ornare ornare libero.
+								"Salah satu bentuk kolaborasinya adalah kolaborasi antara Tahilalats x Vans x KamarQ dan 30 artists,” ujar Andrey, Jakarta, Jumat (18/1/2019). Selain itu, tema ini juga bagian dari melanjutkan tradisi sneakers di Indonesia yang dianggap berkembang. Perkembangan tersebut dapat dilihat dari label-label internasional yang merilis koleksi khusus serta pertumbuhan brand lokal. "Tahun ini kami lebih kepada journey dari sneakers di Indonesia saat ini," ujar Andrey. JSD yang berlangsung selama tiga hari ini spesial menghadirkan beberapa rangkaian acara, seperti exhibition, talkshow, sneaker custom, dan legit check (menguji keaslian sepatu). Juga ada community gathering, mini bazar & garage sale, auction, trading pit & steal deal sale, red carpet, dan suguhan musik. Tak itu saja, JSD 2019 turut serta menghadirkan rilis sneaker eksklusif, seperti Vans Era x Dope&Dapper x JSD Special Edition, hanya 12 pasang di dunia. Lalu ada Puma Hot Wheels, Puma RS x Toys; dan Puma Cell Endura x Blends.
+								</p>
+
+								<p class="p-b-25">
+								Selain itu juga ada giveaway menarik, di antaranya Air Max 97/1 Sean Wotherspoon, Nike Air Fear of God SA Black, dan Off White x Nike Blazer Hallows Eve. Tak lupa disediakan satu unit Honda CBR250RR Black Freedom dan dua Unit Honda PCX 150. Gelaran JSD 2019 yang didukung oleh BCA akan memberikan penawaran atau promo bagi pengunjung khususnya nasabah bank tersebut. Antara lain, potongan harga Rp 500.000 untuk 250 pengunjung pertama setiap hari yang bisa menunjukkan aplikasi Sakuku dengan saldo minimum Rp 100.000. 
 								</p>
 							</div>
 
@@ -166,172 +170,23 @@
 						</h4>
 
 						<ul class="bgwhite">
+						<?php foreach ($product as $product): ?>
 							<li class="flex-w p-b-20">
 								<a href="product-detail.html" class="dis-block wrap-pic-w w-size22 m-r-20 trans-0-4 hov4">
-									<img src="<?php echo base_url()?>assets/images/item-16.jpg" alt="IMG-PRODUCT">
+									<img src="<?php echo base_url().'upload/product/'.$product->product_image ?>" alt="IMG-PRODUCT">
 								</a>
 
 								<div class="w-size23 p-t-5">
 									<a href="product-detail.html" class="s-text20">
-										White Shirt With Pleat Detail Back
+										<?php echo $product->product_name ?>
 									</a>
 
 									<span class="dis-block s-text17 p-t-6">
-										$19.00
+										<?php echo "Rp " . number_format($product->product_price); ?>
 									</span>
 								</div>
 							</li>
-
-							<li class="flex-w p-b-20">
-								<a href="product-detail.html" class="dis-block wrap-pic-w w-size22 m-r-20 trans-0-4 hov4">
-									<img src="<?php echo base_url()?>assets/images/item-17.jpg" alt="IMG-PRODUCT">
-								</a>
-
-								<div class="w-size23 p-t-5">
-									<a href="product-detail.html" class="s-text20">
-										Converse All Star Hi Black Canvas
-									</a>
-
-									<span class="dis-block s-text17 p-t-6">
-										$39.00
-									</span>
-								</div>
-							</li>
-
-							<li class="flex-w p-b-20">
-								<a href="product-detail.html" class="dis-block wrap-pic-w w-size22 m-r-20 trans-0-4 hov4">
-									<img src="<?php echo base_url()?>assets/images/item-08.jpg" alt="IMG-PRODUCT">
-								</a>
-
-								<div class="w-size23 p-t-5">
-									<a href="product-detail.html" class="s-text20">
-										Nixon Porter Leather Watch In Tan
-									</a>
-
-									<span class="dis-block s-text17 p-t-6">
-										$17.00
-									</span>
-								</div>
-							</li>
-
-							<li class="flex-w p-b-20">
-								<a href="product-detail.html" class="dis-block wrap-pic-w w-size22 m-r-20 trans-0-4 hov4">
-									<img src="<?php echo base_url()?>assets/images/item-03.jpg" alt="IMG-PRODUCT">
-								</a>
-
-								<div class="w-size23 p-t-5">
-									<a href="product-detail.html" class="s-text20">
-										Denim jacket blue
-									</a>
-
-									<span class="dis-block s-text17 p-t-6">
-										$39.00
-									</span>
-								</div>
-							</li>
-
-							<li class="flex-w p-b-20">
-								<a href="product-detail.html" class="dis-block wrap-pic-w w-size22 m-r-20 trans-0-4 hov4">
-									<img src="<?php echo base_url()?>assets/images/item-05.jpg" alt="IMG-PRODUCT">
-								</a>
-
-								<div class="w-size23 p-t-5">
-									<a href="product-detail.html" class="s-text20">
-										Nixon Porter Leather Watch In Tan
-									</a>
-
-									<span class="dis-block s-text17 p-t-6">
-										$17.00
-									</span>
-								</div>
-							</li>
-						</ul>
-
-						<!-- Archive -->
-						<h4 class="m-text23 p-t-50 p-b-16">
-							Archive
-						</h4>
-
-						<ul>
-							<li class="flex-sb-m">
-								<a href="#" class="s-text13 p-t-5 p-b-5">
-									July 2018
-								</a>
-
-								<span class="s-text13">
-									(9)
-								</span>
-							</li>
-
-							<li class="flex-sb-m">
-								<a href="#" class="s-text13 p-t-5 p-b-5">
-									June 2018
-								</a>
-
-								<span class="s-text13">
-									(39)
-								</span>
-							</li>
-
-							<li class="flex-sb-m">
-								<a href="#" class="s-text13 p-t-5 p-b-5">
-									May 2018
-								</a>
-
-								<span class="s-text13">
-									(29)
-								</span>
-							</li>
-
-							<li class="flex-sb-m">
-								<a href="#" class="s-text13 p-t-5 p-b-5">
-									April  2018
-								</a>
-
-								<span class="s-text13">
-									(35)
-								</span>
-							</li>
-
-							<li class="flex-sb-m">
-								<a href="#" class="s-text13 p-t-5 p-b-5">
-									March 2018
-								</a>
-
-								<span class="s-text13">
-									(22)
-								</span>
-							</li>
-
-							<li class="flex-sb-m">
-								<a href="#" class="s-text13 p-t-5 p-b-5">
-									February 2018
-								</a>
-
-								<span class="s-text13">
-									(32)
-								</span>
-							</li>
-
-							<li class="flex-sb-m">
-								<a href="#" class="s-text13 p-t-5 p-b-5">
-									January 2018
-								</a>
-
-								<span class="s-text13">
-									(21)
-								</span>
-							</li>
-
-							<li class="flex-sb-m">
-								<a href="#" class="s-text13 p-t-5 p-b-5">
-									December 2017
-								</a>
-
-								<span class="s-text13">
-									(26)
-								</span>
-							</li>
+						<?php endforeach;?>
 						</ul>
 
 						<!-- Tags -->

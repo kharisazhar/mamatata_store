@@ -8,7 +8,7 @@
 
 			<div>
 				<p class="s-text7 w-size27">
-					Ada pertanyaan ? silahkan datang ke kantor kami di Jalan X atau hubungi 0900000
+					Ada pertanyaan ? silahkan hubungi 085 640 848584
 				</p>
 
 				<div class="flex-m p-t-30">
@@ -149,8 +149,8 @@
 <!--===============================================================================================-->
 <script type="text/javascript" src="<?php echo base_url();?>assets/vendor/sweetalert/sweetalert.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
-<script src="js/map-custom.js"></script>
-<script src="js/main.js"></script>
+<script src="<?php echo base_url();?>assets/js/map-custom.min.js"></script>
+<script src="<?php echo base_url();?>assets/js/main.min.js"></script>
 <script type="text/javascript">
 	$('.block2-btn-addcart').each(function () {
 		var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();

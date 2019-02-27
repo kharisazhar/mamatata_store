@@ -39,15 +39,17 @@ class Web extends CI_Controller {
 
 	public function blog()
 	{
+		$data["product"] = $this->m_product->getAll();
 		$this->load->view('v_nav');
-		$this->load->view('v_blog');
+		$this->load->view('v_blog', $data);
 		$this->load->view('v_footer');
 	}
 
 	public function blog_detail()
 	{
+		$data["product"] = $this->m_product->getAll();
 		$this->load->view('v_nav');
-		$this->load->view('v_blog_detail');
+		$this->load->view('v_blog_detail', $data);
 		$this->load->view('v_footer');
 	}
 
@@ -104,8 +106,6 @@ class Web extends CI_Controller {
 		} else{
 			show_404();
 		}
-	}
-
-	
+	}	
 	
 }

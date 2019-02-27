@@ -1,7 +1,7 @@
 <!-- <h2 class="text-center" style="padding:20px;">Cooming Soon</h2> -->
 
 <!-- Title Page -->
-<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(images/heading-pages-06.jpg);">
+<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(<?php echo base_url('assets/images/heading_about.jpg'); ?>);">
 		<h2 class="l-text2 t-center">
 			About
 		</h2>
@@ -13,7 +13,7 @@
 			<div class="row">
 				<div class="col-md-4 p-b-30">
 					<div class="hov-img-zoom">
-						<img src="images/banner-14.jpg" alt="IMG-ABOUT">
+						<img src="<?php echo base_url('assets/images/woman_blog.jpg') ?>" alt="IMG-ABOUT">
 					</div>
 				</div>
 

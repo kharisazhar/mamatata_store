@@ -56,10 +56,10 @@
                                                 </th>
                                                 <th>no</th>
                                                 <th>Product name</th>
+                                                <th>Product image</th>
                                                 <th>price</th>
                                                 <th>Descripction</th>
                                                 <th>date</th>
-                                                <th>status</th>
                                                 <th></th>
                                             </tr>
                                         </thead>
@@ -78,7 +78,11 @@
                                                 </td>
                                                 <td><?php echo $no++ ?></td>
                                                 <td class="desc"><?php echo $product->product_name ?></td>
-                                                <td><?php echo $product->product_price ?></td>
+                                                <td class="desc">
+                                                    <!-- <?php echo $product->product_image ?> -->
+                                                    <img src="../upload/product/<?php echo $product->product_image ?>" alt="img-product">
+                                                </td>
+                                                <td><?php echo "Rp " . number_format($product->product_price); ?></td>
                                                 <?php 
                                                     $str = $product->product_description ;
                                                     if (strlen($str) > 10)
@@ -86,9 +90,9 @@
                                                 ?>
                                                 <td><?php echo $str ?></td>
                                                 <td>2018-09-27 02:12</td>
-                                                <td>
+                                                <!-- <td>
                                                     <span class="status--process">Processed</span>
-                                                </td>
+                                                </td> -->
                                                 <td>
                                                     <div class="table-data-feature">
                                                         
