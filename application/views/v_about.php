@@ -23,16 +23,21 @@
 					</h3>
 
 					<p class="p-b-28">
-						Phasellus egestas nisi nisi, lobortis ultricies risus semper nec. Vestibulum pharetra ac ante ut pellentesque. Curabitur fringilla dolor quis lorem accumsan, vitae molestie urna dapibus. Pellentesque porta est ac neque bibendum viverra. Vivamus lobortis magna ut interdum laoreet. Donec gravida lorem elit, quis condimentum ex semper sit amet. Fusce eget ligula magna. Aliquam aliquam imperdiet sodales. Ut fringilla turpis in vehicula vehicula. Pellentesque congue ac orci ut gravida. Aliquam erat volutpat. Donec iaculis lectus a arcu facilisis, eu sodales lectus sagittis. Etiam pellentesque, magna vel dictum rutrum, neque justo eleifend elit, vel tincidunt erat arcu ut sem. Sed rutrum, turpis ut commodo efficitur, quam velit convallis ipsum, et maximus enim ligula ac ligula. Vivamus tristique vulputate ultricies. Sed vitae ultrices orci.
+					Jika Anda pengguna internet yang aktif maka bisnis online shop adalah salah satu topik yang sering Anda temukan di internet sekarang ini. Coba perhatikan media sosial Facebook, Instagram, WhatsApp, dan Twitter, pasti sudah penuh dengan para pebisnis online shop. Bener ga?
+Kebiasaan belanja online pun sudah tidak asing, dan perkembangan bisnis online shop di Indonesia semakin menjanjikan. Tidak perduli status ekonomi seseorang, bila dia sudah menggunakan smartphone, pasti mereka pernah jual-beli online. Itu artinya, bisnis online shop di Indonesia sedang “gurih-gurihnya” nih.
+Selain memudahkan dalam hal transaksi, bisnis online shop juga memberikan kesempatan bagi banyak orang untuk memiliki bisnis sendiri secara mandiri. Tidak butuh modal besar untuk punya sebuah toko online, bahkan ada layanan gratis yang bisa dimanfaatkan untuk menjalankan usaha online shop.
+Bukan modal yang besar, hal terpenting yang harus dimiliki calon pebisnis online adalah pengetahuan tentang bagaimana cara memulai sebuah usaha online shop. Sebenarnya, saya bukanlah pakar di bidang online shop tapi setidaknya saya pernah menjalankan bisnis ini selama beberapa waktu. Jadi, saya cukup paham apa saja yang dibutuhkan untuk menjalankannya.
+
 					</p>
 
 					<div class="bo13 p-l-29 m-l-9 p-b-10">
 						<p class="p-b-11">
-							Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn't really do it, they just saw something. It seemed obvious to them after a while.
+						The way to get started is to quit talking and begin doing.”
 						</p>
 
 						<span class="s-text7">
-							- Steve Job’s
+							- Walt Disney, co-founder of the Walt Disney Company
+
 						</span>
 					</div>
 				</div>

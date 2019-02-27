@@ -19,12 +19,14 @@ class Login extends CI_Controller {
         $check = $this->m_login->check_login("f_user_admin",$where)->num_rows();
         if($check > 0){
             $data_session = array(
-                'nama' => $username,
-                'status' => "login"
+                'name' => $username,
+                'status' => "login",
+                'logged_in' => TRUE
             );
 
             $this->session->set_userdata($data_session);
-            redirect(base_url("web/add"));
+            // redirect(base_url("web/add"));
+            redirect(base_url("admin/dashboard"));
         } else {
             echo "Gagal";
         }

@@ -49,6 +49,13 @@ class M_product extends CI_Model{
         $this->product_id = $post["id"];
         $this->product_name = $post["name"];
         $this->product_price = $post["price"];
+        
+        if (!empty($_FILES["image"]["id"])) {
+            $this->product_image = $this->_uploadImage();
+        } else {
+            $this->product_image = $post["old_image"];
+        }
+
         $this->product_description = $post["description"];
         $this->db->update($this->_table, $this, array('product_id' => $post['id']));
     }
