@@ -141,7 +141,7 @@
 </script>
 <!--===============================================================================================-->
 <script type="text/javascript" src="<?php echo base_url();?>assets/vendor/slick/slick.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url();?>assets/js/slick-custom.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>assets/js/slick-custom.min.js"></script>
 <!--===============================================================================================-->
 <script type="text/javascript" src="<?php echo base_url();?>assets/vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->

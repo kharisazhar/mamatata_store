@@ -31,8 +31,8 @@
 <!--===============================================================================================-->
 	<link href="<?php echo base_url();?>assets/vendor/lightbox2/css/lightbox.min.css" rel="stylesheet">
 <!--===============================================================================================-->
-	<link href="<?php echo base_url();?>assets/css/util.css" rel="stylesheet">
-	<link href="<?php echo base_url();?>assets/css/main.css" rel="stylesheet">
+	<link href="<?php echo base_url();?>assets/css/util.min.css" rel="stylesheet">
+	<link href="<?php echo base_url();?>assets/css/main.min.css" rel="stylesheet">
 <!--===============================================================================================-->
 </head>
 <body class="animsition">
