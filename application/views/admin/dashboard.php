@@ -22,7 +22,7 @@
                                                     <label for="text-input" class=" form-control-label">Product Name</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="text" id="text-input" name="name" placeholder="Text" class="form-control">
+                                                    <input type="text" id="text-input" name="name" placeholder="product name" class="form-control">
                                                     <small class="form-text text-muted">Add product name</small>
                                                 </div>
                                             </div>
@@ -31,7 +31,7 @@
                                                     <label for="text-input" class=" form-control-label">Product Price</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="number" id="text-input" name="price" placeholder="Text" class="form-control">
+                                                    <input type="number" id="text-input" name="price" placeholder="product price" class="form-control">
                                                     <small class="form-text text-muted">Add product price</small>
                                                 </div>
                                             </div>
